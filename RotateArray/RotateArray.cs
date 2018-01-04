@@ -28,10 +28,11 @@ class Rotate
         // RotateLeft(array, 2) -> { 3, 4, 5, 1, 2};
         // Step 1 get the two sections in the right place by reversing
         // {5, 4, 3, 2, 1}
+
+        Reverse(a, 0, a.Length);
         // Step 2 - correct the order by reversing each section
         // {3, 4, 5,
         //  1, 2 }
-        Reverse(a, 0, a.Length);
         Reverse(a, 0, a.Length - pos);
         Reverse (a, a.Length - pos, pos);
     }
